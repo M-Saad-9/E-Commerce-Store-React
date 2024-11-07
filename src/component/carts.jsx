@@ -11,7 +11,7 @@ function ProductCart(Props) {
        <div  className="bg-[#F5F5F5] ">
  
          <div className="flex justify-between mb-3">
-         <div id="discount" className="bg-red-700 text-white  rounded w-14 h-7 text-center ml-3 mt-3">
+         <div id="discount" className="bg-primary text-white  rounded w-14 h-7 text-center ml-3 mt-3">
            {Props.discount}%
          </div>
  
