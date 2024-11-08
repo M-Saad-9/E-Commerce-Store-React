@@ -2,11 +2,13 @@ import productImg1 from "../assets/product-img1.png"
 import productImg2 from "../assets/product-img2.png"
 import productImg3 from "../assets/product.img3.png"
 import starImg from "../assets/Frame.png"
+import { IoMdHeartEmpty } from "react-icons/io";
+import { FaRegEye } from "react-icons/fa6";
 
 function ProductCart(Props) {
   return (
     <div id="product-container">
-     <div id="product-cart" className="w-64 border-2 relative" >
+     <div id="product-cart" className="w-64 relative" >
  
        <div  className="bg-[#F5F5F5] ">
  
@@ -15,9 +17,11 @@ function ProductCart(Props) {
            {Props.discount}%
          </div>
  
-         {/* <div id="icons" className="text-end  mr-3 mt-3">
-           hh
-         </div> */}
+         <div id="icons" className="text-end  mr-3 mt-3 flex flex-col gap-3">
+          <div><IoMdHeartEmpty /></div>
+        
+          <div><FaRegEye /></div>
+         </div>
          </div>
          
  
@@ -27,7 +31,7 @@ function ProductCart(Props) {
  
        </div>
  
-       <div id="product-detail" >
+       <div id="product-detail" className="pl-2" >
        <h1 className="pt-2 pb-2">{Props.productName}</h1>
        <p className="text-red-600 ">${Props.price}</p>
        <img src={starImg} alt="" className="pt-1 pb-1"/>
