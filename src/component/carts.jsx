@@ -7,7 +7,9 @@ import { FaRegEye } from "react-icons/fa6";
 
 function ProductCart(Props) {
   return (
+        
     <div id="product-container">
+
      <div id="product-cart" className="w-64 relative" >
  
        <div  className="bg-[#F5F5F5] ">
@@ -39,14 +41,13 @@ function ProductCart(Props) {
       
        
      </div>
- 
-    </div>
+     </div>
    )
 }
 
 export default function Carts() {
   return(
-    <div className="p-3 flex gap-4">
+    <div className="p-3 flex gap-4 flex-wrap">
     <ProductCart
      productImg={productImg1}
      discount={-40}
