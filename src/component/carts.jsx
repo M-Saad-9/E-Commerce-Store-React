@@ -47,7 +47,7 @@ function ProductCart(Props) {
 
 export default function Carts() {
   return(
-    <div className="p-3 flex gap-4 flex-wrap">
+    <div className="p-3 flex gap-4">
     <ProductCart
      productImg={productImg1}
      discount={-40}
