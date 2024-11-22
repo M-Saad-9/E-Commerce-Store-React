@@ -4,11 +4,11 @@ import productImg3 from "../assets/product.img3.png"
 import starImg from "../assets/Frame.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa6";
-
+// import { Link } from "react-router-dom";
 function ProductCart(Props) {
   return (
         
-    <div id="product-container">
+   
 
      <div id="product-cart" className="w-64 relative" >
  
@@ -39,15 +39,24 @@ function ProductCart(Props) {
        <img src={starImg} alt="" className="pt-1 pb-1"/>
        </div>
       
-       
      </div>
-     </div>
+     
    )
 }
 
 export default function Carts() {
   return(
-    <div className="p-3 flex gap-4">
+    <>
+    <div id="product-container" className="">
+    {/* <div className="mb-10">
+        <img src={frame} alt="" />
+        <div className="flex gap-20">
+          <h1 className="font-semibold text-4xl flex items-end">Flash Sales</h1>
+          <img src={timeImg} alt="" />
+        </div>
+      </div> */}
+
+    <div className="flex gap-4">
     <ProductCart
      productImg={productImg1}
      discount={-40}
@@ -67,10 +76,15 @@ export default function Carts() {
     productName={"IPS LCD Gaming Monitor"}
     price={370}
     />
+      <ProductCart 
+    productImg={productImg3}
+    discount={-30}
+    productName={"IPS LCD Gaming Monitor"}
+    price={370}
+    />
     </div>
+    </div>
+    
+     </>
   )
 }
-
-// relative
-
-// 

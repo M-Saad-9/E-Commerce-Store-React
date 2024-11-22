@@ -1,8 +1,9 @@
 import frame from "../assets/Frame560.png";
 
-function LeftSide() {
+export default function Hero() {
     return(
-        <div className="hidden md:flex height w-64 center p-2 border-r-2 border-black">
+        <div className="mb-8 mt-5 flex justify-center gap-7">
+        <div className="none md:flex height w-64 center p-2 border-right border-black">
             <ul className="flex flex-col gap-3">
             <li>Woman’s Fashion</li>
             <li>Men’s Fashion</li>
@@ -15,30 +16,23 @@ function LeftSide() {
             <li>Health & Beauty</li>
         </ul>
         </div>
-    )
-}
-
-function RightSide() {
-    return(
-        <div className="height width flex items-center">        
-             <div className="border-2  bg-black text-white w-full" >
-                <img src={frame} alt="" />
-                {/* <div className="text-5xl">
-                <h1>Up to 10% </h1>
-                <h1>off Voucher</h1>
-                </div> */}
-             </div>  
-        </div>
+         <div className="w-full md:width flex items-center ">        
+         <div className="bg-black text-white w-full" >
+            <img src={frame} alt="" />
+         </div>  
+    </div>
+    </div>
     )
 }
 
 
 
-export default function Hero(){
-    return(
-        <div className="mb-8 flex gap-3 justify-around mt-5 ml-6 mr-6">
-            <LeftSide />
-            <RightSide />
-        </div>
-    )
-}
+//function Hero(){
+//     return(
+        
+//             <LeftSide />
+        
+//     )
+// }
+
+//  ml-2 mr-2 ml:ml-6 ml:mr-6

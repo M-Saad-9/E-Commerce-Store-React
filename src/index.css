@@ -27,3 +27,21 @@
 .width{
     width: 70%;
 }
+.border-bottom{
+    border-bottom: 0.2px solid #acacac;
+}
+.border-right{
+    border-right: 0.2px solid #acacac;
+}
+.conatiner-x{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+@media (max-width: 768px){
+    .none{
+        display: none;
+    }
+}
