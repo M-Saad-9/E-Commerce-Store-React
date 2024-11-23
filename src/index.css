@@ -40,6 +40,10 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+#wrp{
+    display: flex;
+    flex-wrap: wrap;
+}
 @media (max-width: 768px){
     .none{
         display: none;

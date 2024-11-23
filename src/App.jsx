@@ -14,7 +14,7 @@ function App() {
     <Navbar />
     <Hero />
     <Slider />
-    {/* <Products /> */}
+    <Products />
     </div>
     </>
   )

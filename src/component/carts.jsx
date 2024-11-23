@@ -1,14 +1,11 @@
-import productImg1 from "../assets/product-img1.png"
-import productImg2 from "../assets/product-img2.png"
-import productImg3 from "../assets/product.img3.png"
+
 import starImg from "../assets/Frame.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa6";
 // import { Link } from "react-router-dom";
-function ProductCart(Props) {
+
+export default function ProductCart(Props) {
   return (
-        
-   
 
      <div id="product-cart" className="w-64 relative" >
  
@@ -44,47 +41,40 @@ function ProductCart(Props) {
    )
 }
 
-export default function Carts() {
-  return(
-    <>
-    <div id="product-container" className="">
-    {/* <div className="mb-10">
-        <img src={frame} alt="" />
-        <div className="flex gap-20">
-          <h1 className="font-semibold text-4xl flex items-end">Flash Sales</h1>
-          <img src={timeImg} alt="" />
-        </div>
-      </div> */}
+// export default function Carts() {
+//   return(
+//     <>
+//     <div id="product-container" className="">
 
-    <div className="flex gap-4">
-    <ProductCart
-     productImg={productImg1}
-     discount={-40}
-     productName={"HAVIT HV-G92 Gamepad"}
-     price={120}
-    />
+// <div className="flex gap-4">
+//     <ProductCart
+//      productImg={productImg1}
+//      discount={-40}
+//      productName={"HAVIT HV-G92 Gamepad"}
+//      price={120}
+//     />
 
-    <ProductCart 
-    productImg={productImg2}
-    discount={-35}
-    productName={"AK-900 Wired Keyboard"}
-    price={960}
-    />
-     <ProductCart 
-    productImg={productImg3}
-    discount={-30}
-    productName={"IPS LCD Gaming Monitor"}
-    price={370}
-    />
-      <ProductCart 
-    productImg={productImg3}
-    discount={-30}
-    productName={"IPS LCD Gaming Monitor"}
-    price={370}
-    />
-    </div>
-    </div>
+//     <ProductCart 
+//     productImg={productImg2}
+//     discount={-35}
+//     productName={"AK-900 Wired Keyboard"}
+//     price={960}
+//     />
+//      <ProductCart 
+//     productImg={productImg3}
+//     discount={-30}
+//     productName={"IPS LCD Gaming Monitor"}
+//     price={370}
+//     />
+//       <ProductCart 
+//     productImg={productImg3}
+//     discount={-30}
+//     productName={"IPS LCD Gaming Monitor"}
+//     price={370}
+//     />
+//     </div>
+//     </div>
     
-     </>
-  )
-}
+//      </>
+//   )
+// }
