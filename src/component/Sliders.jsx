@@ -10,7 +10,6 @@ import {
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Carts from "./Carts"
 import frame from "../assets/Frame625.png"
 import timeImg from "../assets/time.png";
 import ProductCart from "./Carts";
@@ -18,11 +17,6 @@ import productImg1 from "../assets/product-img1.png"
 import productImg2 from "../assets/product-img2.png"
 import productImg3 from "../assets/product.img3.png"
 
-// function swiperCart() {
-//   return(
-    
-//   )
-// }
 
 export default function Slider() {
     return (
