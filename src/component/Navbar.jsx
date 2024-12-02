@@ -6,6 +6,7 @@ import { FaUserTie } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Navbar(){
@@ -14,7 +15,7 @@ export default function Navbar(){
 
     return (
 
-        <div className="h-20 border-bottom relative flex justify-around items-center">
+        <div className="h-20 border-bottom relative flex justify-between items-center">
            <div className="center">
            <img src={logo} alt="" className="w-12 center h-12"/>
            <span className="text-2xl font-bold hidden md:flex">Fashion<label className="text-primary">Cart</label></span>
@@ -30,8 +31,8 @@ export default function Navbar(){
            <div className="center gap-8">
 
            <ul className="hidden md:flex gap-3" >
-            <li className="hover:text-red-600 hover:underline">Home</li>
-            <li className="hover:text-red-600 hover:underline">About</li>
+            <li className="hover:text-red-600 hover:underline"><Link to="/">Home</Link></li>
+            <li className="hover:text-red-600 hover:underline"><Link to="/about">About</Link></li>
             <li className="hover:text-red-600 hover:underline">Contact Us</li>
 
     
