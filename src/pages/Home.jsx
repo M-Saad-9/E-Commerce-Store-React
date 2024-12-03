@@ -14,7 +14,7 @@ export default function Home() {
     <hr />
     <SellingProduct />
     <hr />
-   </>
+    </>
   )
 }
 

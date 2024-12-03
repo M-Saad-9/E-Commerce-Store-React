@@ -12,11 +12,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import frame from "../assets/Frame625.png"
 import timeImg from "../assets/time.png";
-// import { Link } from "react-router-dom";
 import Carts from "./Carts";
 
 
 import useProduct from "../Hooks/useProduct";
+import { Link } from "react-router-dom";
 
 
 export default function Slider() {
@@ -69,19 +69,18 @@ export default function Slider() {
              </SwiperSlide>
         ))}
       </Swiper>
-    
     </div>
     </div>
-     <div className="flex justify-center mt-20 mb-16">
-      <button className="w-56 h-14 bg-[#db4444] rounded
-                 font-medium text-white"><a href="">View All Products</a></button>
-          
-          
-            {/* <Link
-        // to={"/Products"}
-        // className="font-medium rounded bg-primary center text-white h-14 w-56 mx-auto my-16"
-      // ></Link> */}
-     </div>
+
+     <div className="flex justify-center mt-10 mb-16">
+      {/* <div className="w-56 h-14 bg-[#db4444] rounded
+                 font-medium text-white"> */}
+        <Link to="/products" 
+        className="font-medium rounded bg-primary center text-white h-14 w-56 mx-auto my-16">
+          View All Products
+        </Link>
+      </div>
+     {/* </div> */}
      </>
     )
 }

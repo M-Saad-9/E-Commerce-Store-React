@@ -1,27 +1,27 @@
-import Banner from "./component/Banner"
-import Navbar from "./component/Navbar"
-// import Carts from "./component/Carts"
-import Slider from "./component/Sliders"
-import Hero from "./component/Hero"
-import Products from "./pages/Products"
-import Category from "./component/Category"
-import Home from "./pages/Home"
+import Banner from "./component/Banner";
+import Navbar from "./component/Navbar";
+import Products from "./pages/Products";
+import Home from "./pages/Home";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 function App() {
 
   return (
     <>
+  
     <Banner />
     <div className="conatiner-x">
     <Navbar />
-    <Home />
-    <Products />
+    
     <Routes>
-    <Route path="/" index element={<Home />} />
-    <Route path="/about" index element={<About />} />
-    {/* <Route path="/contact" index element={<Home />} /> */}
+    <Route path="/"  element={<Home />} />
+    <Route path="/about"  element={<About />} />
+    <Route path="/contact"  element={<Contact />} />
+    <Route path="/products"  element={<Products />} />
     </Routes>
     </div>
     </>

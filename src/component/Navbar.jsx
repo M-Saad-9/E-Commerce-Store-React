@@ -33,7 +33,7 @@ export default function Navbar(){
            <ul className="hidden md:flex gap-3" >
             <li className="hover:text-red-600 hover:underline"><Link to="/">Home</Link></li>
             <li className="hover:text-red-600 hover:underline"><Link to="/about">About</Link></li>
-            <li className="hover:text-red-600 hover:underline">Contact Us</li>
+            <li className="hover:text-red-600 hover:underline"><Link to="/contact">Contact</Link></li>
 
     
             {!isLoggedIn ? <li className="hover:text-red-600 hover:underline">Login</li> : null}

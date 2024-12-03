@@ -19,7 +19,7 @@ export default function Products() {
   const searchResult = searchProduct()
   
   return (
-    <div className="mt-16">
+    <div className="product">
 
       <input
         type="search"
@@ -32,6 +32,7 @@ export default function Products() {
         placeholder="Enter Your product Name"
       />
 
+      {products === null ? "Loading...." : null}
      {isLoading ? <div className="text-primary text-center">Loading...</div> : ""}
      <div className="text-primary text-center">{error}</div>
 
