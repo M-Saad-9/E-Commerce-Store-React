@@ -39,7 +39,7 @@ export default function Slider() {
       <div className="flex">
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         modules={[Navigation, Scrollbar, Autoplay, A11y]}
         autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
         pagination={{ clickable: true }}
@@ -48,6 +48,18 @@ export default function Slider() {
         scrollbar={{ draggable: true }}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          1024: {
+            slidesPerView: 4, // Large screens
+          },
+          768: {
+            slidesPerView: 3, // Tablet screens
+          },
+          480: {
+            slidesPerView: 2, // Mobile screens
+          },
+        }}
+  
       >
 
 
@@ -55,7 +67,7 @@ export default function Slider() {
              <SwiperSlide key={item.id}>
              <>
          <div id="product-container" className="">
-         <div className="flex gap-4">
+         <div className="flex gap-4 justify-center">
              <Carts
                productImg={item.thumbnail}
                discount={-40}

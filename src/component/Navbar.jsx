@@ -15,7 +15,7 @@ export default function Navbar(){
 
     return (
 
-        <div className="h-20 border-bottom relative flex justify-between items-center">
+        <div className= "h-20 border-bottom relative flex justify-between items-center">
            <div className="center">
            <img src={logo} alt="" className="w-12 center h-12"/>
            <span className="text-2xl font-bold hidden md:flex">Fashion<label className="text-primary">Cart</label></span>
@@ -61,8 +61,8 @@ export default function Navbar(){
                 <IoMdHeartEmpty className="hidden ml:flex"/>
                 <FiShoppingCart />
             </> : null}
-           
 
+            
            <div className="w-8 h-8 bg-primary center rounded-full px-2 text-white">
            <FaUserTie className=""/>
            </div>

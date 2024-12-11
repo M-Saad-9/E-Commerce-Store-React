@@ -12,7 +12,7 @@ const getProductData = async () => {
  try {
    setIsLoading(true)
  const response = await axios(API_KEY)
- // console.log(response.data.products);
+  // console.log(response.data.products);
  setProducts(response?.data?.products)
  setIsLoading(false)
  } catch (error) {

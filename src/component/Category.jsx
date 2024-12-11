@@ -1,12 +1,3 @@
-import img from "../assets/Frame623.png"
-import cellPhone from "../assets/Category-CellPhone.png"
-import Computer from "../assets/Category-Computer.png"
-import SmartWatch from "../assets/Category-SmartWatch.png"
-import Camera from "../assets/Category-Camera.png"
-import Headphone from "../assets/Category-Headphone.png"
-import Gamepad from "../assets/Category-Gamepad.png"
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { 
     Navigation,
@@ -19,6 +10,16 @@ import {
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
+import img from "../assets/Frame623.png"
+import cellPhone from "../assets/Category-CellPhone.png"
+import Computer from "../assets/Category-Computer.png"
+import SmartWatch from "../assets/Category-SmartWatch.png"
+import Camera from "../assets/Category-Camera.png"
+import Headphone from "../assets/Category-Headphone.png"
+import Gamepad from "../assets/Category-Gamepad.png"
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 
 function Carts(Props) {
@@ -62,26 +63,30 @@ export default function Category() {
         </div>
       </div>
       <div className="flex gap-2">
+      
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
         autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
         pagination={{ clickable: true }}
-         navigation
+        navigation
         // 
         scrollbar={{ draggable: true }}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
-      />
       
+       >
+      
+ 
         <SwiperSlide>
         <ProductCategory />
         </SwiperSlide>
+       
       
         
       
-      <Swiper/>
+      </Swiper>
       </div>
     </div>
   )}

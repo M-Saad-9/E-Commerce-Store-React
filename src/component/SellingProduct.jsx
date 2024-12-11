@@ -17,7 +17,7 @@ export default function SellingProduct() {
             </div>
         </div>
 
-        <div className="flex gap-5 mt-12">
+        <div className="flex gap-5 flex-wrap lg:flex-nowrap justify-center mt-12">
         {products?.slice(0, 4)?.map((item) => (
           <Carts
           key={item.id}
