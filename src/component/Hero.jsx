@@ -2,7 +2,7 @@ import frame from "../assets/Frame560.png";
 
 export default function Hero() {
     return(
-        <div className="mb-8 mt-5 flex justify-center gap-7">
+        <div className="mb-8 pt-5 flex justify-center gap-7">
         <div className="none md:flex height w-64 center p-2 border-right border-black">
             <ul className="flex flex-col gap-3">
             <li>Woman’s Fashion</li>

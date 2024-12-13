@@ -4,7 +4,7 @@ import ProductCart from "../component/Carts";
 import useProduct from "../Hooks/useProduct";
 
 
-export default function Products() {
+export default function Products({darkMode}) {
   const {products, isLoading, error} = useProduct()
 
   const [searchTerm, setSearchTerm] = useState("")
@@ -19,8 +19,9 @@ export default function Products() {
   const searchResult = searchProduct()
   
   return (
-    <div className="product">
+    <div className={` product transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}  ${darkMode ? "text-white" : ""} `}>
 
+      <div className="py-8">
       <input
         type="search"
         name="price"
@@ -28,9 +29,11 @@ export default function Products() {
         onChange={(event) => {
           setSearchTerm(event.target.value?.toLowerCase())
         }}
-        className="block w-full outline-none rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary my-8 sm:text-sm/6"
+        className="block w-full outline-none rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm/6"
         placeholder="Enter Your product Name"
       />
+      </div>
+      
 
       {products === null ? "Loading...." : null}
      {isLoading ? <div className="text-primary text-center">Loading...</div> : ""}

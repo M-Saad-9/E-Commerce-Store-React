@@ -8,9 +8,9 @@ import service2  from "../assets/Services1.png";
 import service3  from "../assets/Services2.png";
 
 
-export default function Home() {
+export default function Home({darkMode}) {
   return (
-   <>
+   <div className={`transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}  ${darkMode ? "text-white" : ""}`}>
     <Hero />
     <Slider />
     <hr />
@@ -23,7 +23,7 @@ export default function Home() {
       <img src={frame} alt="" />
     </div>
 
-    <div className="flex justify-center flex-wrap gap-10 mt-10">
+    <div className="flex justify-center flex-wrap gap-10 mt-10 pb-10">
     <div>
      <div className="flex justify-center">
       <img src={service1} alt="" className="w-20 h-20"/>
@@ -50,7 +50,7 @@ export default function Home() {
     </div>
     </div>
     
-    </>
+    </div>
   )
 }
 
