@@ -8,10 +8,11 @@ import Footer from "./component/Footer";
 
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import { useState } from "react";
+import ProductDetails from "./pages/ProductDetails";
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   return (
     <>
   
@@ -24,6 +25,7 @@ function App() {
     <Route path="/about"  element={<About />} />
     <Route path="/contact"  element={<Contact />} />
     <Route path="/products"  element={<Products darkMode={darkMode} />} />
+    <Route path="/products/:id"  element={<ProductDetails />} />
     </Routes>
     </div>
     <Footer />

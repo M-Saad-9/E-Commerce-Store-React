@@ -2,12 +2,15 @@
 import starImg from "../assets/Frame.png"
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 export default function ProductCart(Props) {
   return (
-
-     <div id="product-cart" className="w-64 relative" >
+    <Link
+    to={`/products/${Props.id} `} >
+    
+     {/* <div id="product-cart" className="w-64 relative" > */}
  
        <div  className="bg-[#F5F5F5] ">
  
@@ -36,7 +39,7 @@ export default function ProductCart(Props) {
        <img src={starImg} alt="" className="pt-1 pb-1"/>
        </div>
       
-     </div>
-     
+     {/* </div> */}
+     </Link>
    )
 }

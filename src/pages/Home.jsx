@@ -8,6 +8,8 @@ import service2  from "../assets/Services1.png";
 import service3  from "../assets/Services2.png";
 
 
+
+
 export default function Home({darkMode}) {
   return (
    <div className={`transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}  ${darkMode ? "text-white" : ""}`}>
