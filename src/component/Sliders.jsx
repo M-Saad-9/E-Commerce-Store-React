@@ -38,8 +38,8 @@ export default function Slider() {
       <div className="text-primary text-center">{error}</div>
       <div className="flex">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={10}
+        slidesPerView={2}
         modules={[Navigation, Scrollbar, Autoplay, A11y]}
         autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
         pagination={{ clickable: true }}
@@ -51,13 +51,20 @@ export default function Slider() {
         breakpoints={{
           1024: {
             slidesPerView: 4, // Large screens
+            spaceBetween: 50,
           },
           768: {
             slidesPerView: 3, // Tablet screens
+            spaceBetween: 30,
           },
           480: {
             slidesPerView: 2, // Mobile screens
+            spaceBetween: 20,
           },
+          320:{
+            slidesPerView: 1.5,
+            spaceBetween: 10,
+          }
         }}
   
       >
@@ -66,9 +73,10 @@ export default function Slider() {
         {products?.slice(0,5).map((item) => (
              <SwiperSlide key={item.id}>
              <>
-         <div id="product-container" className="">
+         <div id="product-container " className="">
          <div className="flex gap-4 justify-center">
              <Carts
+               id={item.id}
                productImg={item.thumbnail}
                discount={-40}
                productName={item.title}

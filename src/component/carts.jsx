@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 export default function ProductCart(Props) {
+  
   return (
     <Link
-    to={`/products/${Props.id} `} >
+    to={`/products/${Props.id} `} 
+    className="w-64 " >
     
      {/* <div id="product-cart" className="w-64 relative" > */}
  

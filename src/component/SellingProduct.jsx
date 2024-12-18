@@ -16,10 +16,11 @@ export default function SellingProduct() {
             <a  href="">View All</a>
             </div>
         </div>
-
-        <div className="flex gap-5 flex-wrap lg:flex-nowrap justify-center mt-12">
+        {/* flex gap-5 flex-wrap lg:flex-nowrap justify-center mt-12 */}
+        <div className=" flex gap-5 flex-wrap lg:flex-nowrap justify-center mt-12">
         {products?.slice(0, 4)?.map((item) => (
           <Carts
+          id={item.id}
           key={item.id}
           productImg={item.thumbnail}
           discount={-40}

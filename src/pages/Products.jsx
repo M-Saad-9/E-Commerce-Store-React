@@ -39,14 +39,17 @@ export default function Products({darkMode}) {
      {isLoading ? <div className="text-primary text-center">Loading...</div> : ""}
      <div className="text-primary text-center">{error}</div>
 
-      <div className="flex flex-wrap justify-center gap-5">
+      <div className="flex flex-wrap justify-center gap-5 pb-7">
         {searchResult?.map((item) => (
-           <ProductCart 
+          <div className="w-64 h-auto flex-shrink-0">
+            <ProductCart 
            key={item.id}
+           id={item.id}
            productImg={item.thumbnail}
            productName={item.title}
            price={item.price}   
            />
+          </div>
         ))}
        </div>
      </div>
