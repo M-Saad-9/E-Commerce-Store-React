@@ -48,6 +48,7 @@
     width: 170px;
     height: 145px;
 }
+
 @media (max-width: 768px){
     .none{
         display: none;

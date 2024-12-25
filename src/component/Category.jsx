@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { 
-    Navigation,
-    Pagination,
-    Scrollbar,
-    A11y,
-    Autoplay,
-  } from 'swiper/modules';
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -23,28 +23,30 @@ import { FaArrowLeft } from "react-icons/fa";
 
 
 function Carts(Props) {
- return (
-     <div className="w-44 flex justify-center items-center box border-2">
-        <div className="">
+  return (
+    <div className="w-44 flex justify-center items-center box border-2">
+      <div className="">
         <div className="w-14  m-auto">
-        <img src={Props.img} alt="" className="w-full"/>
+          <img src={Props.img} alt="" className="w-full" />
         </div>
         <div>
-        <h1 className="text-center">{Props.name}</h1>
+          <h1 className="text-center">{Props.name}</h1>
         </div>
-        </div>
+      </div>
     </div>
- )
+  )
 }
 function ProductCategory() {
-  return(
-    <div className="flex gap-3">
-    <Carts img={cellPhone} name={"Phone"}/>
-    <Carts img={Computer} name={"Computers"}/>
-    <Carts img={SmartWatch} name={"SmartWatch"}/>
-    <Carts img={Camera} name={"Camera"}/>
-    <Carts img={Headphone} name={"HeadPhones"}/>
-    <Carts img={Gamepad} name={"Gaming"}/>
+  return (
+    
+    <div className="flex gap-3 ">
+      
+      <Carts img={cellPhone} name={"Phone"} />
+      <Carts img={Computer} name={"Computers"} />
+      <Carts img={SmartWatch} name={"SmartWatch"} />
+      <Carts img={Camera} name={"Camera"} />
+      <Carts img={Headphone} name={"HeadPhones"} />
+      <Carts img={Gamepad} name={"Gaming"} />
     </div>
   )
 }
@@ -62,33 +64,39 @@ export default function Category() {
           </div>
         </div>
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 ">
       
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
-        autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
-        pagination={{ clickable: true }}
-        navigation
-        // 
-        scrollbar={{ draggable: true }}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
-      
-       >
-      
- 
-        <SwiperSlide>
-        <ProductCategory />
-        </SwiperSlide>
-       
-      
-        
-      
-      </Swiper>
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1}
+          modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
+          autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
+          pagination={{ clickable: true }}
+          navigation
+          // 
+          scrollbar={{ draggable: true }}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // breakpoints={{
+          //   1024: {
+          //     slidesPerView: 6, // Large screens
+          //   },
+          //   600: {
+          //     slidesPerView: 4,
+          //   }
+          // }}
+        > 
+
+
+
+          <SwiperSlide>
+          <ProductCategory />
+          </SwiperSlide>
+
+         </Swiper>
       </div>
     </div>
-  )}
- 
+  )
+}
+
 

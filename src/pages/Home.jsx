@@ -1,6 +1,7 @@
 import Category from "../component/Category";
 import Hero from "../component/Hero";
 import SellingProduct from "../component/SellingProduct";
+import ExploreProduct from "../component/ExploreProduct";
 import Slider from "../component/Sliders";
 import frame  from "../assets/Frame600.png";
 import service1  from "../assets/Services.png";
@@ -24,6 +25,8 @@ export default function Home({darkMode}) {
     <div>
       <img src={frame} alt="" />
     </div>
+
+    <ExploreProduct />
 
     <div className="flex justify-center flex-wrap gap-10 mt-10 pb-10">
     <div>
