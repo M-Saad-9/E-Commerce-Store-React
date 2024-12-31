@@ -19,7 +19,7 @@ export default function SellingProduct() {
                     <FaArrowRight />
                 </div>
             </div>
-            <div className="  justify-center mt-12 flex flex-wrap gap-2  xl:gap-7 sm:py-4 md:py-6 lg:py-10  pb-10 sm:pb-12 md:pb-16 lg:pb-24 xl:pb-28">
+            <div className="  justify-center flex flex-wrap gap-2  xl:gap-7 sm:py-4 md:py-6 lg:py-10  pb-10 sm:pb-12 md:pb-16 lg:pb-24 xl:pb-28">
                 {products?.slice(0, 10)?.map((item) => (
                     <Carts
                         id={item.id}

@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import ProductCart from "../component/Carts";
+import Carts from "../component/Carts";
 import useProduct from "../Hooks/useProduct";
 
 
@@ -39,9 +39,23 @@ export default function Products({darkMode}) {
      {isLoading ? <div className="text-primary text-center">Loading...</div> : ""}
      <div className="text-primary text-center">{error}</div>
 
-      <div className="flex flex-wrap justify-center gap-5 pb-7">
+      <div className=" flex flex-wrap gap-2  xl:gap-7 sm:py-4 md:py-6 lg:py-10  pb-10 sm:pb-12 md:pb-16 lg:pb-24 xl:pb-28">
+             {searchResult?.map((item) => (
+               <Carts
+               key={item.id}
+               id={item.id}
+               productImg={item.thumbnail}
+               productName={item.title}
+               price={item.price}   
+               discountPercentage={item.discountPercentage}
+               rating={item.rating}
+               />
+             ))}
+           </div>
+
+      {/* <div className="flex flex-wrap gap-2  xl:gap-7 sm:py-4 md:py-6 lg:py-10  pb-10 sm:pb-12 md:pb-16 lg:pb-24 xl:pb-28">
         {searchResult?.map((item) => (
-          <div className="w-64 h-auto flex-shrink-0">
+           <div className=" h-auto flex-shrink-0 ">
             <ProductCart 
            key={item.id}
            id={item.id}
@@ -51,9 +65,9 @@ export default function Products({darkMode}) {
            discountPercentage={item.discountPercentage}
            rating={item.rating}
            />
-          </div>
-        ))}
-       </div>
+         </div>
+       ))}
+       </div> */}
      </div>
   )
 }

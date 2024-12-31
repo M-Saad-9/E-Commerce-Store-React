@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "surge ./dist --domain e-commerce-store-react-app.surge.sh"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",

@@ -9,6 +9,8 @@ import Footer from "./component/Footer";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 import ProductDetails from "./pages/ProductDetails";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
     <Route path="/"  element={<Home darkMode={darkMode}/>} />
     <Route path="/about"  element={<About />} />
     <Route path="/contact"  element={<Contact />} />
+    <Route path="/login"  element={<Login />} />
+    <Route path="/signup"  element={<Signup />} />
     <Route path="/products"  element={<Products darkMode={darkMode} />} />
     <Route path="/products/:id"  element={<ProductDetails />} />
     </Routes>

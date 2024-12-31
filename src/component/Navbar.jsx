@@ -12,7 +12,7 @@ import { IoMoonSharp } from "react-icons/io5";
 
 
 export default function Navbar({darkMode,setDarkMode}){
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     const [hamBurger,sethamBurger] = useState(false)
    
 
@@ -39,7 +39,7 @@ export default function Navbar({darkMode,setDarkMode}){
             <li className="hover:text-red-600 hover:underline"><Link to="/contact">Contact</Link></li>
 
     
-            {!isLoggedIn ? <li className="hover:text-red-600 hover:underline">Login</li> : null}
+            {!isLoggedIn ? <li className="hover:text-red-600 hover:underline"><Link to="/login">Login</Link></li> : null}
            </ul>
 
            
@@ -50,7 +50,7 @@ export default function Navbar({darkMode,setDarkMode}){
             <li className="hover:text-red-600 hover:underline"><Link to="/contact">Contact</Link></li>
 
     
-            {!isLoggedIn ? <li className="hover:text-red-600 hover:underline">Login</li> : null}
+            {!isLoggedIn ? <li className="hover:text-red-600 hover:underline"><Link to="/login">Login</Link></li> : null}
            </ul>}
 
         
