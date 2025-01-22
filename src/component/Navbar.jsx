@@ -12,13 +12,13 @@ import { IoMoonSharp } from "react-icons/io5";
 
 
 export default function Navbar({darkMode,setDarkMode}){
-    const isLoggedIn = false;
+    const isLoggedIn = true;
     const [hamBurger,sethamBurger] = useState(false)
    
 
     return (
 
-        <div className= {`h-20 border-bottom relative flex justify-between items-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}`}>
+        <div className= {`conatiner-x h-20 border-bottom relative flex justify-between items-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}`}>
            <div className="center">
            <img src={logo} alt="" className="w-12 center h-12"/>
            <span className={`text-2xl font-bold hidden md:flex  ${darkMode ? "text-white" : ""} `}>Fashion<label className="text-primary">Cart</label></span>

@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login({darkMode}) {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className={`conatiner-x min-h-screen flex items-center justify-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}`}>
         
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-2xl">
-      <h1 className="text-2xl font-bold text-[50px]  text-center">Fashion<span className="text-primary">Cart</span></h1>
+      <h1 className="text-2xl font-bold text-[40px] mm:text-[50px]  text-center pt-2">Fashion<span className="text-primary">Cart</span></h1>
         {/* Header */}
-        <h2 className="text-3xl font-semibold text-center">Login</h2>
+        <h2 className="text-3xl font-bold text-center">Login</h2>
 
         {/* Form */}
         <form className="space-y-4">

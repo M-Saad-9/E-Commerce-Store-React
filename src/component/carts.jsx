@@ -14,7 +14,7 @@ export default function ProductCart(Props) {
   return (
     <Link
     to={`/products/${Props.id} `} 
-    className=" group w-[calc(50%-8px)] sm:w-[calc(32%)] lg:w-[calc(25%-10px)] xl:w-[calc(25%-28px)] h-auto mt-5 rounded mx-auto " >
+    className=" group w-[calc(50%-8px)] sm:w-[calc(32%)] lg:w-[calc(25%-10px)] xl:w-[calc(25%-28px)] h-auto mt-5 rounded mx-auto" >
     
      {/* <div id="product-cart" className="w-64 relative" > */}
  

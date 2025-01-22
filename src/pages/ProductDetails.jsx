@@ -5,7 +5,7 @@ import axios from 'axios';
 import useSWR from "swr";
 import { IoMdHeartEmpty } from "react-icons/io";
 
-export default function ProductDetails() {
+export default function ProductDetails({darkMode}) {
   const param = useParams()
   const { data, error, isLoading } = useSWR(`https://dummyjson.com/products/${param.id}`, axios)
   const [selectImg, setSelectImg] = useState(null);
@@ -14,7 +14,7 @@ export default function ProductDetails() {
   const productdetail = data?.data
   return (
     <>
-      <div className='product  flex flex-col md:flex-row gap-5 mt-20 mb-20 justify-center'>
+      <div className={`conatiner-x product  flex flex-col md:flex-row gap-5 pt-20 pb-20 justify-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""} ${darkMode ? "text-white" : ""}`}>
         <div className="productimg md:w-[55%] flex gap-3">
           {productdetail?.images?.length > 1 ?
             <div className='w-[150px] h-full  flex flex-col gap-3 '>
@@ -31,7 +31,7 @@ export default function ProductDetails() {
           </div>
         </div>
         <div className="productdetail   md:w-[45%] flex flex-col gap-3">
-          <h1 className='font-semibold text-black text-[20px]'>{productdetail?.title}</h1>
+          <h1 className={`font-semibold  ${darkMode ? "text-white" : "text-black"} text-[20px]`}>{productdetail?.title}</h1>
           <div className='flex gap-2'>
             <p>({productdetail?.rating} Reviews)</p>
             <p class="text-gray-700 ml-2">|</p>

@@ -19,7 +19,7 @@ export default function Products({darkMode}) {
   const searchResult = searchProduct()
   
   return (
-    <div className={` product transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}  ${darkMode ? "text-white" : ""} `}>
+    <div className={`conatiner-x product transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}  ${darkMode ? "text-white" : ""} `}>
 
       <div className="py-8 pb-5">
       <input

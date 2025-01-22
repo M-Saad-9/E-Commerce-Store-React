@@ -19,19 +19,20 @@ function App() {
     <>
   
     <Banner />
-    <div className="conatiner-x">
     <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+    {/* <div className="conatiner-x"> */}
+    
     
     <Routes>
     <Route path="/"  element={<Home darkMode={darkMode}/>} />
     <Route path="/about"  element={<About />} />
     <Route path="/contact"  element={<Contact />} />
-    <Route path="/login"  element={<Login />} />
-    <Route path="/signup"  element={<Signup />} />
+    <Route path="/login"  element={<Login darkMode={darkMode}/>} />
+    <Route path="/signup"  element={<Signup darkMode={darkMode}/>} />
     <Route path="/products"  element={<Products darkMode={darkMode} />} />
-    <Route path="/products/:id"  element={<ProductDetails />} />
+    <Route path="/products/:id"  element={<ProductDetails darkMode={darkMode}/>} />
     </Routes>
-    </div>
+    {/* </div> */}
     <Footer />
     </>
   )
