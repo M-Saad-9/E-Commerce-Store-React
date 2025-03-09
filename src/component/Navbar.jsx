@@ -21,15 +21,15 @@ export default function Navbar({darkMode,setDarkMode}){
         <div className= {`conatiner-x h-20 border-bottom relative flex justify-between items-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : ""}`}>
            <div className="center">
            <img src={logo} alt="" className="w-12 center h-12"/>
-           <span className={`text-2xl font-bold hidden md:flex  ${darkMode ? "text-white" : ""} `}>Fashion<label className="text-primary">Cart</label></span>
+           <span className={`text-2xl font-bold hidden mm:flex  ${darkMode ? "text-white" : ""} `}>Fashion<label className="text-primary">Cart</label></span>
            </div>
 
-           <div className="h-9 w-32 ml:w-60 px-2 m-4 rounded center bg-[#F5F5F5]">
+           {/* <div className="h-9 w-32 ml:w-60 px-2 m-4 rounded center bg-[#F5F5F5]">
             <input type="search" 
             placeholder="What are you looking for?"
             className="bg-transparent w-full outline-none text-xs ml:text-sm  font-bold" />
             <CiSearch className="text-2xl"/>
-           </div>
+           </div> */}
 
            <div className="center gap-8">
 
